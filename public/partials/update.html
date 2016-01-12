@@ -1,0 +1,14 @@
+<div ng-controller="UpdateCtrl as uc">
+<form name="todo">
+<h2>Edit a Note</h2>
+  <div class="form-group">
+    <label for="exampleInput">Title</label>
+    <input type="text" class="form-control" id="title" ng-model="uc.user.title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputNote">Note</label>
+    <textarea type="text" class="form-control" id="note" ng-model="uc.user.note" placeholder="Add a note"></textarea>
+  </div>
+  <button type="submit" ng-click="uc.updateNote()" class="btn btn-default">Save</button>
+</form>
+</div>

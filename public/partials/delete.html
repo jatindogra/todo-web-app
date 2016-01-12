@@ -1,0 +1,14 @@
+<div ng-controller="deleteCtrl as dc">
+<form name="todo">
+<h2>Delete a Note</h2>
+  <div class="form-group">
+    <label for="exampleInput">Title</label>
+    <input type="text" class="form-control" id="title" ng-model="dc.user.title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputNote">Note</label>
+    <textarea type="text" class="form-control" id="note" ng-model="dc.user.note" placeholder="Add a note"></textarea>
+  </div>
+  <button type="submit" ng-click="dc.deleteNote()" class="btn btn-default">Delete</button>
+</form>
+</div>

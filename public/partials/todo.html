@@ -1,0 +1,33 @@
+<div ng-controller="todoCtrl as ctrl">
+<form name="todo">
+<h2>Add a Note</h2>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id="title" ng-model="ctrl.todonote.title" placeholder="Title" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Note</label>
+    <textarea type="text" class="form-control" id="note" ng-model="ctrl.todonote.note" placeholder="Add a note" required></textarea>
+  </div>
+  <button type="submit" ng-click="ctrl.save()" class="btn btn-default">Save</button>
+</form>
+</div><br/>
+<div ng-controller="getNotes as gn">
+<table class="table">
+<thead>
+<tr>
+<th>Title</th>
+<th>Note</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="list in gn.notess">
+<td>{{ list.title }}</td>
+<td>{{ list.note }}</td>
+<td><a ng-href="/#/users/edit/{{list.title}}/{{list.note}}">Edit</a>
+<a ng-href="/#/users/delete/{{list.title}}/{{list.note}}">Delete</a></td>
+</tr>
+</tbody>
+</table>
+</div>
